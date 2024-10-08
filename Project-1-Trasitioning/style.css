@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+/* We are getting a cool font from the internet so the text looks nicer! */
+
+* {
+    box-sizing: border-box;
+    /* This makes sure everything on the page fits inside its own box neatly, just like making sure all your toys fit into the toy box. */
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    /* This chooses a style for the text, like picking a type of handwriting. */
+
+    margin: 0;
+    /* This removes any space around the edges of the page, making sure it starts from the very edge. */
+
+    display: flex;
+    /* This lines up things (like our panels) inside the body in a row. Imagine putting toys in a straight line. */
+
+    align-items: center;
+    /* This makes everything sit nicely in the middle from top to bottom, like placing your toys in the middle of the table. */
+
+    justify-content: center;
+    /* This puts everything in the middle from left to right, so everything is centered. */
+
+    overflow: hidden;
+    /* This hides anything that tries to poke out from the sides of the page. Like if your drawing spills over the paper, it hides the extra bits. */
+
+    font-family: 'Muli', sans-serif;
+    /* This changes the text style to 'Muli', the one we got from the internet, to make it look good. */
+
+    height: 100vh;
+    /* This makes the page as tall as the entire screen. So no matter how tall your screen is, the page will fill it up. */
+}
+
+.container {
+    display: flex;
+    /* This arranges the panels in a row, like blocks next to each other. */
+}
+
+.panel {
+    background-size: auto cover;
+    /* This makes sure the picture on each panel stretches to cover the whole panel. It's like coloring a picture inside the lines. */
+
+    background-position: center;
+    /* This makes sure the middle of the picture is right in the middle of the panel, so it's nicely centered. */
+
+    background-repeat: no-repeat;
+    /* This stops the picture from repeating itself like wallpaper. Instead, it shows just one picture. */
+
+    cursor: pointer;
+    /* This makes the mouse pointer turn into a little hand when you hover over the panel, showing that you can click on it. */
+
+    height: 80vh;
+    /* This makes each panel 80% as tall as the screen, so they're big but not too tall. */
+
+    border-radius: 50px;
+    /* This makes the corners of the panels rounded, like cutting the sharp corners off a piece of paper. */
+/*  */
+    flex: 0.8;
+    /* This tells the panel to take up a small amount of space when it's not clicked, like a small toy in a box. */
+
+    margin: 10px;
+    /* This gives each panel a little space around it, like leaving space between toys on a shelf so they don't touch. */
+
+    position: relative;
+    /* This lets us place things inside the panel, like the text, exactly where we want. It's like deciding where each toy goes on the shelf. */
+
+    transition: flex 0.7s ease-in;
+    /* This makes the panel grow or shrink smoothly when clicked, like a balloon filling up with air or shrinking down slowly. */
+}
+
+.panel h3 {
+    font-size: 24px;
+    /* This sets the size of the text inside the panel. Bigger numbers mean bigger text! */
+
+    position: absolute;
+    /* This lets us put the text in a specific place inside the panel. */
+
+    bottom: 20px;
+    /* This makes the text stay 20 pixels away from the bottom of the panel, so it's not too close to the edge. */
+
+    left: 20px;
+    /* This makes the text stay 20 pixels away from the left side of the panel. */
+
+    margin: 0;
+    /* This removes any extra space around the text so it stays in the exact spot we want. */
+
+    opacity: 0;
+    /* This makes the text invisible at first. Like it's hiding! */
+}
+
+.panel.active {
+    flex: 5;
+    /* When a panel is clicked, it grows 5 times bigger than the others! It's like a toy growing when you press a button. */
+}
+
+.panel.active h3 {
+    opacity: 1;
+    /* This makes the hidden text show up when the panel is clicked, like turning on a light to make it visible. */
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    /* This section is for small screens like phones. It's like making sure your toys fit nicely in a smaller box. */
+
+    .container {
+        width: 100vw;
+        /* This makes the container fill the entire width of the screen, so nothing is squished. */
+    }
+
+    .panel:nth-of-type(2),
+    .panel:nth-of-type(3) {
+        display: none;
+        /* This hides the first and second panels on small screens so things don't get too crowded. */
+    }
+}
