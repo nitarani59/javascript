@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.bg {
+    background: url('https://www.bookgeeks.in/wp-content/uploads/2017/03/06-TOP-INDIAN-WRITERS-OF-ALL-TIME.jpg') no-repeat center center/cover;
+    /* background-color: aqua; */
+    filter: blur(10px);
+    position: absolute;
+    width: 80vw;
+    height: 90vh;
+    z-index: -1;
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+    margin-left: 50%;
+    margin-top: 25%;
+}
