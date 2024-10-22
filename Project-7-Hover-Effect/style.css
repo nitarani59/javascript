@@ -114,7 +114,7 @@ width: var(--hover-width);
     width: var(--other-width);
 }
 
-.split.right, .split.left, .split.right::before, split.left::before {
+.split.right, .split.left, .split.right::before, .split.left::before {
     transition: all var(--speed)ease-in-out;
 }
 
